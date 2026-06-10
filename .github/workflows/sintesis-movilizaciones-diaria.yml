@@ -12,6 +12,7 @@ permissions:
 jobs:
   sintesis:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -24,8 +25,31 @@ jobs:
       - name: Instalar dependencias
         run: pip install -r requirements-ssc.txt
 
-      - name: Descargar y parsear agenda SSC
-        run: python3 scripts/sync_movilizaciones_ssc.py
+      - name: Verificar secretos SMTP
+        env:
+          SSC_SMTP_HOST: ${{ secrets.SSC_SMTP_HOST }}
+          SSC_SMTP_USER: ${{ secrets.SSC_SMTP_USER }}
+          SSC_SMTP_PASSWORD: ${{ secrets.SSC_SMTP_PASSWORD }}
+        run: |
+          test -n "$SSC_SMTP_HOST" || (echo "FALTA: SSC_SMTP_HOST" && exit 1)
+          test -n "$SSC_SMTP_USER" || (echo "FALTA: SSC_SMTP_USER" && exit 1)
+          test -n "$SSC_SMTP_PASSWORD" || (echo "FALTA: SSC_SMTP_PASSWORD" && exit 1)
+          echo "Secretos OK"
+
+      - name: Descargar PDF SSC
+        run: |
+          mkdir -p data
+          curl -fL --retry 5 --retry-delay 15 --retry-all-errors \
+            --connect-timeout 30 --max-time 300 \
+            -A "Mozilla/5.0" \
+            -o data/.ssc_agenda_cache.pdf \
+            "https://www.ssc.cdmx.gob.mx/storage/app/media/Movilizaciones/Agenda%20de%20Movilizaciones%20Sociales.pdf"
+          ls -la data/.ssc_agenda_cache.pdf
+
+      - name: Parsear agenda SSC
+        run: |
+          python3 scripts/sync_movilizaciones_ssc.py --from-cache
+          test -f data/movilizaciones_ssc.json
 
       - name: Generar síntesis y enviar correo
         env:
