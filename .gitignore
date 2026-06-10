@@ -1,3 +1,5 @@
 .DS_Store
 *.log
 bin/
+data/.ssc_agenda_cache.pdf
+data/ssc_smtp.local.json

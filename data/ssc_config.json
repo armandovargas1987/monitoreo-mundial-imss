@@ -1,0 +1,51 @@
+{
+  "pdf_url": "https://www.ssc.cdmx.gob.mx/storage/app/media/Movilizaciones/Agenda%20de%20Movilizaciones%20Sociales.pdf",
+  "destinatarios": [
+    "armando.vargasr@imss.gob.mx",
+    "armando.vargas1987@gmail.com"
+  ],
+  "alerta_maxima": [
+    "imss",
+    "instituto mexicano del seguro social",
+    "imss-bienestar",
+    "imss bienestar",
+    "oficinas centrales del instituto",
+    "cmn ",
+    " cmn",
+    "umf ",
+    " umf",
+    "sindicato mexicano de salud",
+    "sindicato de salud",
+    "trabajadores del imss",
+    "personal de salud del imss",
+    "rjp",
+    "régimen de jubilaciones y pensiones",
+    "regimen de jubilaciones y pensiones",
+    "pensionados del imss",
+    "jubilados del imss",
+    "derechohabiente",
+    "zoé robledo",
+    "zoe robledo",
+    "tu_imss"
+  ],
+  "alerta_alta": [
+    "sector salud",
+    "trabajadores de la salud",
+    "trabajadoras de la salud",
+    "condiciones laborales",
+    "jubilaci",
+    "pension",
+    "issste",
+    "hospital",
+    "unidad médica",
+    "unidad medica"
+  ],
+  "smtp": {
+    "host": "smtp.gmail.com",
+    "port": 587,
+    "user": "",
+    "password_env": "SSC_SMTP_PASSWORD",
+    "from_name": "Monitoreo IMSS — Movilizaciones CDMX",
+    "use_tls": true
+  }
+}
