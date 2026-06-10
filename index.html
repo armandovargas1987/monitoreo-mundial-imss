@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Acceso · Monitoreo IMSS · Mundial 2026</title>
+<link rel="stylesheet" href="assets/css/login.css">
+</head>
+<body>
+<form class="card" id="login-form" autocomplete="off">
+  <div class="seal">IMSS</div>
+  <h1>Centro de Monitoreo</h1>
+  <div class="sub">Marchas y Manifestaciones · Mundial 2026</div>
+  <label>Usuario</label>
+  <input name="usuario" placeholder="nombre.apellido" required autofocus>
+  <label>Contraseña</label>
+  <input name="clave" type="password" placeholder="••••••••" required>
+  <div class="err" id="error" hidden>Usuario o contraseña incorrectos.</div>
+  <button type="submit">Ingresar</button>
+  <div class="foot">CVOED–CPES · Acceso restringido</div>
+</form>
+<script>
+// Acceso público al monitor; login solo para administración
+location.replace('monitor.html');
+</script>
+</body>
+</html>

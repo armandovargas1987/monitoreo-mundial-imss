@@ -1,0 +1,28 @@
+{
+  "ok": true,
+  "ooad": [
+    {"id": "1", "clave": "CMNOR", "nombre": "OOAD Ciudad de México Norte", "ciudad": "CDMX", "titular": "Dr. José Antonio Zamudio", "conmutador": "55 5747 3500", "activo": "1"},
+    {"id": "2", "clave": "CMSUR", "nombre": "OOAD Ciudad de México Sur", "ciudad": "CDMX", "titular": "Mtro. Luis Rafael López", "conmutador": "55 5634 9910", "activo": "1"},
+    {"id": "3", "clave": "JAL", "nombre": "OOAD Jalisco", "ciudad": "GDL", "titular": "Dra. Karla Guadalupe López", "conmutador": "33 3668 3000", "activo": "1"},
+    {"id": "4", "clave": "NL", "nombre": "OOAD Nuevo León", "ciudad": "MTY", "titular": "Dr. Tonatihu Ortiz Castillo", "conmutador": "81 8150 3132", "activo": "1"}
+  ],
+  "tipos": [
+    {"id": "1", "nombre": "Marcha", "activo": "1"},
+    {"id": "2", "nombre": "Manifestación masiva", "activo": "1"},
+    {"id": "3", "nombre": "Bloqueo vial", "activo": "1"},
+    {"id": "4", "nombre": "Plantón / protesta", "activo": "1"},
+    {"id": "5", "nombre": "Concentración", "activo": "1"},
+    {"id": "6", "nombre": "Concierto / evento masivo", "activo": "1"},
+    {"id": "7", "nombre": "Visita diplomática", "activo": "1"}
+  ],
+  "niveles": [
+    {"id": "1", "clave": "alto", "nombre": "Alto", "color": "#d97316"},
+    {"id": "2", "clave": "medio", "nombre": "Medio", "color": "#e0a800"},
+    {"id": "3", "clave": "bajo", "nombre": "Bajo", "color": "#1a5c45"}
+  ],
+  "estados": [
+    {"id": "1", "clave": "ACTIVA", "nombre": "Activa", "color": "#c1121f"},
+    {"id": "2", "clave": "PROGRAMADA", "nombre": "Programada", "color": "#a57f2c"},
+    {"id": "3", "clave": "CONCLUIDA", "nombre": "Concluida", "color": "#6b6b6e"}
+  ]
+}

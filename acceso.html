@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Acceso administración · Monitoreo IMSS · Mundial 2026</title>
+<link rel="stylesheet" href="assets/css/login.css">
+</head>
+<body>
+<form class="card" id="login-form" autocomplete="off">
+  <div class="seal">IMSS</div>
+  <h1>Panel de administración</h1>
+  <div class="sub">Captura de marchas · Acceso restringido</div>
+  <label>Usuario</label>
+  <input name="usuario" placeholder="nombre.apellido" required autofocus>
+  <label>Contraseña</label>
+  <input name="clave" type="password" placeholder="••••••••" required>
+  <div class="err" id="error" hidden>Usuario o contraseña incorrectos.</div>
+  <button type="submit">Ingresar</button>
+  <a href="monitor.html" style="display:block;text-align:center;margin-top:14px;font-size:13px">← Volver al monitor público</a>
+  <div class="foot">CVOED–CPES · Acceso restringido</div>
+</form>
+<script>
+const USERS = { 'marvin.ortiz': 'DH2026!' };
+document.getElementById('login-form').addEventListener('submit', function (e) {
+  e.preventDefault();
+  const u = this.usuario.value.trim();
+  const c = this.clave.value;
+  if (USERS[u] === c) {
+    sessionStorage.setItem('monitoreo_auth', '1');
+    sessionStorage.setItem('monitoreo_user', u);
+    location.href = 'admin.html';
+    return;
+  }
+  document.getElementById('error').hidden = false;
+});
+if (sessionStorage.getItem('monitoreo_auth')) location.href = 'admin.html';
+</script>
+</body>
+</html>

@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fan Fest alternos CDMX · Copa Mundial 2026 · IMSS</title>
+<style>
+  :root {
+    --guinda: #611232;
+    --verde: #1a5c45;
+    --verde-2: #13795c;
+    --gold: #a57f2c;
+    --gray: #6b6b6e;
+    --line: #e3e2dd;
+    --bg: #f4f5f3;
+    --panel: #fff;
+    --rojo: #c1121f;
+    --naranja: #d97316;
+    --amarillo: #e0a800;
+    --ink: #23232a;
+    --shadow: 0 1px 3px rgba(20,20,30,.08), 0 6px 18px rgba(20,20,30,.06);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Segoe UI", system-ui, Roboto, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    font-size: 14px;
+    line-height: 1.55;
+  }
+  a { color: var(--guinda); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .topbar {
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+    background: #fff; border-bottom: 3px solid var(--guinda);
+    padding: 12px 24px; position: sticky; top: 0; z-index: 100;
+    box-shadow: var(--shadow);
+  }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .seal {
+    width: 44px; height: 44px; border-radius: 50%;
+    background: radial-gradient(circle at 35% 30%, var(--verde-2), var(--verde));
+    color: #fff; display: grid; place-items: center;
+    font-weight: 800; font-size: 11px;
+    box-shadow: inset 0 0 0 3px rgba(255,255,255,.25);
+  }
+  .brand h1 { font-size: 16px; margin: 0; line-height: 1.2; font-weight: 800; }
+  .brand h1 b { color: var(--guinda); }
+  .brand .sub { font-size: 11px; color: var(--gray); letter-spacing: .4px; text-transform: uppercase; }
+  .spacer { flex: 1; }
+  .navlink {
+    border: 1px solid var(--line); border-radius: 9px; padding: 7px 14px;
+    font-weight: 700; font-size: 12px; color: var(--verde); background: #fff;
+    text-decoration: none;
+  }
+  .navlink:hover { border-color: var(--verde); text-decoration: none; }
+
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 24px 20px 48px; }
+
+  .hero {
+    background: linear-gradient(135deg, var(--guinda) 0%, #4a0d25 55%, var(--verde) 100%);
+    color: #fff; border-radius: 16px; padding: 28px 32px; margin-bottom: 24px;
+    box-shadow: var(--shadow);
+  }
+  .hero h2 { margin: 0 0 8px; font-size: 22px; font-weight: 800; }
+  .hero p { margin: 0; opacity: .92; max-width: 720px; font-size: 14.5px; }
+  .hero .meta { margin-top: 14px; font-size: 11px; opacity: .75; text-transform: uppercase; letter-spacing: .5px; }
+
+  .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-bottom: 24px; }
+  .kpi {
+    background: var(--panel); border-radius: 12px; padding: 16px 18px;
+    border: 1px solid var(--line); box-shadow: var(--shadow);
+    border-left: 4px solid var(--guinda);
+  }
+  .kpi.gold { border-left-color: var(--gold); }
+  .kpi.verde { border-left-color: var(--verde); }
+  .kpi.rojo { border-left-color: var(--rojo); }
+  .kpi .n { font-size: 28px; font-weight: 800; line-height: 1; color: var(--guinda); }
+  .kpi.gold .n { color: var(--gold); }
+  .kpi.verde .n { color: var(--verde); }
+  .kpi .l { font-size: 10.5px; color: var(--gray); text-transform: uppercase; margin-top: 6px; letter-spacing: .3px; }
+
+  .card {
+    background: var(--panel); border: 1px solid var(--line);
+    border-radius: 14px; box-shadow: var(--shadow); margin-bottom: 20px; overflow: hidden;
+  }
+  .card-h {
+    display: flex; align-items: center; gap: 8px;
+    padding: 12px 18px; border-bottom: 1px solid var(--line);
+    font-weight: 800; font-size: 12px; text-transform: uppercase;
+    letter-spacing: .5px; color: var(--guinda); background: #fafaf8;
+  }
+  .card-h .ic { color: var(--verde); }
+  .card-b { padding: 18px 20px; }
+
+  .conclusion {
+    background: #f0f7f4; border: 1px solid #c5dfd4; border-radius: 10px;
+    padding: 14px 18px; margin-bottom: 18px; font-size: 13.5px;
+  }
+  .conclusion strong { color: var(--verde); }
+
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { background: #fafaf8; color: var(--guinda); font-size: 11px; text-transform: uppercase; letter-spacing: .4px; }
+  tr:last-child td { border-bottom: 0; }
+  tr:hover td { background: #fafaf8; }
+
+  .badge {
+    display: inline-block; font-size: 10px; font-weight: 800;
+    text-transform: uppercase; padding: 3px 9px; border-radius: 7px; color: #fff; white-space: nowrap;
+  }
+  .b-cdmx { background: var(--guinda); }
+  .b-fed { background: var(--verde); }
+  .b-fifa { background: var(--gold); }
+  .b-priv { background: var(--naranja); }
+  .b-esp { background: var(--gray); }
+
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  @media (max-width: 768px) { .grid-2 { grid-template-columns: 1fr; } }
+
+  .event-block { margin-bottom: 22px; }
+  .event-block:last-child { margin-bottom: 0; }
+  .event-block h3 {
+    margin: 0 0 6px; font-size: 15px; color: var(--guinda);
+    display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+  }
+  .event-block p { margin: 0 0 10px; color: var(--ink); }
+  .deps { list-style: none; padding: 0; margin: 0 0 10px; }
+  .deps li {
+    padding: 5px 0 5px 18px; position: relative; font-size: 13px;
+  }
+  .deps li::before {
+    content: ""; position: absolute; left: 0; top: 12px;
+    width: 7px; height: 7px; border-radius: 50%; background: var(--verde-2);
+  }
+
+  .sedes-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 8px;
+    margin-top: 10px;
+  }
+  .sede {
+    background: #fafaf8; border: 1px solid var(--line); border-radius: 8px;
+    padding: 8px 12px; font-size: 12.5px;
+  }
+  .sede .alc { font-weight: 700; color: var(--guinda); font-size: 11px; text-transform: uppercase; }
+  .sede .lug { color: var(--ink); }
+
+  .sources { list-style: none; padding: 0; margin: 0; }
+  .sources li {
+    padding: 10px 0; border-bottom: 1px dashed var(--line); font-size: 13px;
+  }
+  .sources li:last-child { border-bottom: 0; }
+  .sources .src-name { font-weight: 700; color: var(--ink); }
+  .sources .src-desc { color: var(--gray); font-size: 12px; margin-top: 2px; }
+
+  .note {
+    font-size: 12px; color: var(--gray); border-top: 1px solid var(--line);
+    padding-top: 14px; margin-top: 8px;
+  }
+
+  footer {
+    text-align: center; padding: 20px; font-size: 11px; color: var(--gray);
+    border-top: 1px solid var(--line); margin-top: 12px;
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand">
+    <div class="seal">IMSS</div>
+    <div>
+      <h1>Referencia operativa · <b>Fan Fest alternos CDMX</b></h1>
+      <div class="sub">Copa Mundial FIFA 2026 · CVOED–CPES · Inteligencia de campo</div>
+    </div>
+  </div>
+  <div class="spacer"></div>
+  <a class="navlink" href="monitor.html">← Volver al monitor</a>
+</div>
+
+<div class="wrap">
+
+  <div class="hero">
+    <h2>Concentraciones masivas fuera del estadio en la Ciudad de México</h2>
+    <p>Síntesis de eventos alternos al FIFA Fan Fest del Zócalo, sus dependencias de gobierno responsables y marco de protección civil. Información recopilada de fuentes públicas (abril–junio 2026).</p>
+    <div class="meta">Actualizado · 9 jun 2026 · Uso interno monitoreo IMSS</div>
+  </div>
+
+  <div class="kpis">
+    <div class="kpi">
+      <div class="n">18</div>
+      <div class="l">Festivales futboleros</div>
+    </div>
+    <div class="kpi gold">
+      <div class="n">1</div>
+      <div class="l">FIFA Fan Fest · Zócalo</div>
+    </div>
+    <div class="kpi verde">
+      <div class="n">1</div>
+      <div class="l">Campo Marte 26</div>
+    </div>
+    <div class="kpi rojo">
+      <div class="n">7</div>
+      <div class="l">Sedes activas 39 días</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-h"><span class="ic">◆</span> Conclusión</div>
+    <div class="card-b">
+      <div class="conclusion">
+        <strong>Sí, los fan fests alternos en CDMX se realizarán con dependencias de gobierno.</strong>
+        Los 18 Festivales Futboleros son 100% del Gobierno de la CDMX. Campo Marte es impulsado por el gobierno federal (SECTUR + SEDENA) con autorización de Protección Civil capitalina. El Zócalo opera en coordinación FIFA + Gobierno CDMX. El Ángel de la Independencia funciona como punto de celebración y activaciones oficiales, no como fan fest con transmisión permanente.
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-h"><span class="ic">▦</span> Panorama comparativo</div>
+    <div class="card-b" style="padding:0">
+      <table>
+        <thead>
+          <tr>
+            <th>Evento</th>
+            <th>Estado</th>
+            <th>Responsable</th>
+            <th>Aforo est.</th>
+            <th>Alcohol</th>
+            <th>Periodo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>18 Festivales Futboleros</strong></td>
+            <td>Confirmado</td>
+            <td><span class="badge b-cdmx">Gob. CDMX</span></td>
+            <td>~2,000 c/u</td>
+            <td>No</td>
+            <td>11 jun – 19 jul</td>
+          </tr>
+          <tr>
+            <td><strong>FIFA Fan Fest · Zócalo</strong><br><small style="color:var(--gray)">«Templo del Futbol»</small></td>
+            <td>Confirmado</td>
+            <td><span class="badge b-fifa">FIFA</span> <span class="badge b-cdmx">Gob. CDMX</span></td>
+            <td>~60,000/día</td>
+            <td>Sí (en zona)</td>
+            <td>11 jun – 19 jul</td>
+          </tr>
+          <tr>
+            <td><strong>Campo Marte 26 Santander</strong></td>
+            <td>Confirmado · amparos</td>
+            <td><span class="badge b-fed">Gob. federal</span> <span class="badge b-priv">Privado</span></td>
+            <td>10,000–15,500/día</td>
+            <td>Sí (9:00–2:00)</td>
+            <td>11 jun – 19 jul</td>
+          </tr>
+          <tr>
+            <td><strong>Ángel de la Independencia / Reforma</strong></td>
+            <td>Punto de celebración</td>
+            <td><span class="badge b-cdmx">Gob. CDMX</span> <span class="badge b-esp">Espontáneo</span></td>
+            <td>Variable (alta)</td>
+            <td>—</td>
+            <td>Durante el torneo</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-h"><span class="ic">⚑</span> 1 · Festivales Futboleros</div>
+      <div class="card-b">
+        <div class="event-block">
+          <p>Apuesta explícita del <strong>Gobierno de la Ciudad de México</strong> para extender el Mundial al espacio público fuera del Fan Fest oficial de la FIFA. Gratuitos, sin alcohol, ambiente familiar.</p>
+          <ul class="deps">
+            <li><strong>Jefa de Gobierno</strong> — programa «La Fiesta del Mundial»</li>
+            <li><strong>Secretaría de Turismo CDMX</strong> — Alejandra Frausto</li>
+            <li><strong>Secretaría de Cultura</strong> — conciertos y actividades</li>
+            <li><strong>Secretaría del Deporte</strong> — actividades deportivas</li>
+            <li><strong>SGIRPC</strong> — lineamientos y protección civil</li>
+            <li><strong>SSC</strong> — seguridad (~291 policías en conjunto)</li>
+          </ul>
+          <p class="note">7 sedes transmiten los 104 partidos durante los 39 días del torneo. Las 11 restantes se activan en partidos de México y encuentros destacados.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-h"><span class="ic">⚑</span> 2 · Campo Marte 26</div>
+      <div class="card-b">
+        <div class="event-block">
+          <p>Evento <strong>privado avalado por el gobierno federal</strong>, distinto de los Festivales Futboleros capitalinos. La alcaldía Miguel Hidalgo no lo organiza ni autoriza.</p>
+          <ul class="deps">
+            <li><strong>SECTUR federal</strong> — promotor</li>
+            <li><strong>SEDENA</strong> — facilita el espacio militar</li>
+            <li><strong>The Mates Contents S.A. de C.V.</strong> — operador privado</li>
+            <li><strong>SGIRPC CDMX</strong> — autorización de protección civil</li>
+          </ul>
+          <p class="note">Enfrenta amparos de vecinos de Polanco por ruido, impacto urbano y cumplimiento de protección civil. Mauricio Tabe (alcalde MH) remite quejas a ventanilla federal/CDMX.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-h"><span class="ic">⚑</span> 3 · FIFA Fan Fest · Zócalo y caso Miguel Hidalgo</div>
+    <div class="card-b">
+      <div class="grid-2" style="gap:24px">
+        <div>
+          <h3><span class="badge b-fifa">FIFA</span> Templo del Futbol · Zócalo</h3>
+          <p>Evento oficial de la FIFA en la Plaza de la Constitución. Organización a cargo del <strong>Gobierno CDMX en coordinación con FIFA</strong>. Acceso gratuito con aforo controlado, filtros de seguridad SSC y cortes viales.</p>
+          <ul class="deps">
+            <li>FIFA / Host City Manager (Michel Bauer)</li>
+            <li>Gobierno CDMX — operación y seguridad</li>
+            <li>SGIRPC — protección civil</li>
+            <li>SSC — 3 cinturones de seguridad, 7 puntos de inspección</li>
+            <li>Ocesa — promotora de espectáculos en el Zócalo</li>
+          </ul>
+        </div>
+        <div>
+          <h3><span class="badge b-cdmx">Gob. CDMX</span> Parque Cri-Cri vs Campo Marte</h3>
+          <p>En Miguel Hidalgo coexisten dos dinámicas distintas:</p>
+          <ul class="deps">
+            <li><strong>Parque Cri-Cri</strong> — Festival Futbolero gratuito del Gobierno CDMX. Brugada confirmó que se realizará en área bajo control de la Ciudad, pese a la negativa de Tabe.</li>
+            <li><strong>Campo Marte</strong> — evento federal/comercial; la alcaldía no asume organización ni recursos.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-h"><span class="ic">◎</span> 18 sedes · Festivales Futboleros por alcaldía</div>
+    <div class="card-b">
+      <div class="sedes-grid">
+        <div class="sede"><div class="alc">Álvaro Obregón</div><div class="lug">Parque La Bombilla</div></div>
+        <div class="sede"><div class="alc">Azcapotzalco</div><div class="lug">Parque Tezozómoc</div></div>
+        <div class="sede"><div class="alc">Benito Juárez</div><div class="lug">Parque Las Américas</div></div>
+        <div class="sede"><div class="alc">Coyoacán</div><div class="lug">Parque de la Consolación</div></div>
+        <div class="sede"><div class="alc">Cuajimalpa</div><div class="lug">Deportivo San Mateo Tlaltenango</div></div>
+        <div class="sede"><div class="alc">Cuauhtémoc</div><div class="lug">Plaza Garibaldi</div></div>
+        <div class="sede"><div class="alc">Gustavo A. Madero</div><div class="lug">Deportivo Hermanos Galeana</div></div>
+        <div class="sede"><div class="alc">Gustavo A. Madero</div><div class="lug">Campos Revolución</div></div>
+        <div class="sede"><div class="alc">Iztacalco</div><div class="lug">Deportivo Leandro Valle</div></div>
+        <div class="sede"><div class="alc">Iztapalapa</div><div class="lug">Utopía Meyehualco</div></div>
+        <div class="sede"><div class="alc">Iztapalapa</div><div class="lug">Central de Abasto</div></div>
+        <div class="sede"><div class="alc">Magdalena Contreras</div><div class="lug">Unidad Independencia</div></div>
+        <div class="sede"><div class="alc">Miguel Hidalgo</div><div class="lug">Parque Cri-Cri</div></div>
+        <div class="sede"><div class="alc">Milpa Alta</div><div class="lug">Deportivo San Francisco Tecoxpa</div></div>
+        <div class="sede"><div class="alc">Tlalpan</div><div class="lug">Deportivo Vivanco</div></div>
+        <div class="sede"><div class="alc">Tláhuac</div><div class="lug">Bosque de Tláhuac</div></div>
+        <div class="sede"><div class="alc">Venustiano Carranza</div><div class="lug">Utopía Deportivo Eduardo Molina</div></div>
+        <div class="sede"><div class="alc">Xochimilco</div><div class="lug">Deportivo Xochimilco</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-h"><span class="ic">▣</span> Marco regulatorio · Protección Civil</div>
+    <div class="card-b">
+      <p>La <strong>SGIRPC</strong> publicó en Gaceta Oficial (30 abr 2026) lineamientos que aplican al Fan Fest del Zócalo y a los Festivales Futboleros. Vigencia hasta el <strong>24 jul 2026</strong>.</p>
+      <ul class="deps">
+        <li>Programa Especial de Protección Civil obligatorio para cada evento</li>
+        <li>Rutas de entrada y salida separadas; listas 90 min antes del inicio</li>
+        <li>Dictámenes estructurales para pantallas, escenarios y estructuras temporales</li>
+        <li>Revisiones cada 5 días; reportes diarios meteorológicos</li>
+        <li>Prohibición de drones (salvo autorización AFAC)</li>
+        <li>SGIRPC puede suspender eventos si la realidad no coincide con lo declarado</li>
+      </ul>
+      <p class="note">A inicios de junio, la SGIRPC reportó que el Fan Fest del Zócalo y la gran mayoría de Festivales Futboleros ya habían entregado su documentación de protección civil.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-h"><span class="ic">🔗</span> Fuentes consultadas</div>
+    <div class="card-b">
+      <ul class="sources">
+        <li>
+          <div class="src-name"><a href="https://www.excelsior.com.mx/ciudad-de-mexico/cdmx-tendra-18-grandes-festivales-futboleros-gratuitos" target="_blank" rel="noopener">Excelsior — 18 Festivales Futboleros gratuitos</a></div>
+          <div class="src-desc">Anuncio oficial del programa capitalino; sedes independientes del Fan Fest FIFA.</div>
+        </li>
+        <li>
+          <div class="src-name"><a href="https://www.chilango.com/que-hacer/mundial-2026-conciertos-gratis-festivales-futboleros-cdmx-santanera-askis-y-mas/" target="_blank" rel="noopener">Chilango — Festivales Futboleros y conciertos</a></div>
+          <div class="src-desc">Lista de 18 ubicaciones, dependencias (Turismo, Cultura, Deporte) y periodo de operación.</div>
+        </li>
+        <li>
+          <div class="src-name"><a href="https://www.tudn.com/mundial-2026/cdmx-tendra-18-fan-fest-en-el-mundial-2026-donde-estaran-partidos-y-actividades" target="_blank" rel="noopener">TUDN — 18 sedes y actividades</a></div>
+          <div class="src-desc">Detalle de sedes por alcaldía y cobertura de partidos.</div>
+        </li>
+        <li>
+          <div class="src-name"><a href="https://www.eluniversal.com.mx/metropoli/mundial-2026-emiten-lineamientos-para-el-fifa-fan-fest-en-el-zocalo-de-la-cdmx-y-festivales-futboleros-en-las-16-alcaldias/" target="_blank" rel="noopener">El Universal — Lineamientos SGIRPC</a></div>
+          <div class="src-desc">Acuerdo de Gaceta Oficial: reglas para Zócalo y festivales en 16 alcaldías.</div>
+        </li>
+        <li>
+          <div class="src-name"><a href="https://www.excelsior.com.mx/ciudad-de-mexico/festivales-futboleros-y-fan-fest-cdmx-cumplen-con-proteccion-civil" target="_blank" rel="noopener">Excelsior — Cumplimiento protección civil</a></div>
+          <div class="src-desc">SGIRPC confirma entrega de PIPC; menciona Fan Fest Zócalo, Estadio y Campo Marte.</div>
+        </li>
+        <li>
+          <div class="src-name"><a href="https://www.eluniversal.com.mx/metropoli/mauricio-tabe-se-desmarca-del-fan-fest-en-campo-marte-es-un-evento-privado-que-el-gobierno-de-cdmx-autorizo-dice/" target="_blank" rel="noopener">El Universal — Tabe y Campo Marte</a></div>
+          <div class="src-desc">Alcaldía MH no organiza el evento; SECTUR federal y autorización PC de CDMX.</div>
+        </li>
+        <li>
+          <div class="src-name"><a href="https://www.milenio.com/estados/miguel-hidalgo-no-organiza-autoriza-fan-fest-campo-marte-tabe" target="_blank" rel="noopener">Milenio — Responsabilidad federal en Campo Marte</a></div>
+          <div class="src-desc">SECTUR + SEDENA facilitan espacio; venta de alcohol y duración de 40 días.</div>
+        </li>
+        <li>
+          <div class="src-name"><a href="https://www.proceso.com.mx/nacional/cdmx/2026/4/14/brugada-desafia-tabe-fan-fest-del-mundial-si-va-en-la-alcaldia-miguel-hidalgo-372227.html" target="_blank" rel="noopener">Proceso — Brugada vs Tabe en Miguel Hidalgo</a></div>
+          <div class="src-desc">Gobierno CDMX asumirá Fan Fest en área bajo su control (Parque Cri-Cri).</div>
+        </li>
+        <li>
+          <div class="src-name"><a href="https://aristeguinoticias.com/2005/investigaciones-especiales/piden-cancelar-campo-marte-26-evento-que-combina-al-ejercito-con-el-mundial-y-empresa-vinculada-a-televisa/" target="_blank" rel="noopener">Aristegui — Convenio Campo Marte 26</a></div>
+          <div class="src-desc">Convenio SEDENA–SECTUR con operador privado; amparos vecinales.</div>
+        </li>
+        <li>
+          <div class="src-name"><a href="https://www.fifa.com/es/tournaments/mens/worldcup/canadamexicousa2026/fifa-fan-festival/mexico-city" target="_blank" rel="noopener">FIFA — Fan Festival Ciudad de México</a></div>
+          <div class="src-desc">Sitio oficial: Zócalo, «Templo del Futbol», 11 jun – 19 jul 2026.</div>
+        </li>
+        <li>
+          <div class="src-name"><a href="https://www.eluniversal.com.mx/metropoli/implementaran-filtros-de-seguridad-para-el-acceso-al-fifa-fan-fest-del-zocalo-tambien-habran-cortes-viales/" target="_blank" rel="noopener">El Universal — Seguridad Fan Fest Zócalo</a></div>
+          <div class="src-desc">SSC: cinturones de seguridad, inspección de bolsas y cortes viales.</div>
+        </li>
+        <li>
+          <div class="src-name"><a href="https://www.infobae.com/mexico/deportes/2026/05/24/cdmx-tendra-18-sedes-gratuitas-para-ver-el-mundial-2026-donde-estaran-y-que-partidos-transmitiran/" target="_blank" rel="noopener">Infobae — 18 sedes gratuitas</a></div>
+          <div class="src-desc">Estrategia gubernamental; 7 sedes con los 104 partidos, 11 con México y destacados.</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  Instituto Mexicano del Seguro Social · CVOED–CPES · Centro de Monitoreo Copa Mundial 2026<br>
+  Documento de referencia · No sustituye fuentes oficiales ni comunicados institucionales
+</footer>
+
+</body>
+</html>

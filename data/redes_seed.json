@@ -1,0 +1,82 @@
+{
+  "publicaciones": [
+    {
+      "id": "seed-zr-1",
+      "cuenta": "zoerobledo",
+      "handle": "@zoerobledo",
+      "nombre": "Zoé Robledo Aburto",
+      "texto": "Instalamos el Comando Central del IMSS para el Mundial 2026. Sesión permanente, monitoreo en tiempo real y coordinación nacional en las tres sedes para proteger la vida, brindar atención médica oportuna y mantener la continuidad de los servicios de salud.",
+      "url": "https://x.com/zoerobledo",
+      "fuente": "X · @zoerobledo",
+      "tipo": "publicacion",
+      "relevancia": "alta",
+      "fecha": "2026-06-05",
+      "etiquetas": ["comando-central", "mundial-2026", "operativo"]
+    },
+    {
+      "id": "seed-zr-2",
+      "cuenta": "zoerobledo",
+      "handle": "@zoerobledo",
+      "nombre": "Zoé Robledo Aburto",
+      "texto": "Acompañando a la Presidenta Claudia Sheinbaum, informamos sobre las acciones del IMSS en el Mundial Social 2026: inclusión, deporte adaptado y presencia institucional en la antesala del torneo.",
+      "url": "https://x.com/zoerobledo",
+      "fuente": "X · @zoerobledo",
+      "tipo": "publicacion",
+      "relevancia": "alta",
+      "fecha": "2026-06-08",
+      "etiquetas": ["mundial-social", "mundial-2026"]
+    },
+    {
+      "id": "seed-zr-3",
+      "cuenta": "zoerobledo",
+      "handle": "@zoerobledo",
+      "nombre": "Zoé Robledo Aburto",
+      "texto": "El IMSS activa mega operativo de salud para junio y julio 2026: 253 unidades médicas preparadas, triage en partidos de las sedes CDMX, Guadalajara y Monterrey, y vigilancia epidemiológica de visitantes.",
+      "url": "https://x.com/zoerobledo",
+      "fuente": "Declaración · Comando Central",
+      "tipo": "publicacion",
+      "relevancia": "alta",
+      "fecha": "2026-06-04",
+      "etiquetas": ["253-unidades", "triage", "mundial-2026"]
+    },
+    {
+      "id": "seed-imss-1",
+      "cuenta": "Tu_IMSS",
+      "handle": "@Tu_IMSS",
+      "nombre": "IMSS Oficial",
+      "texto": "El IMSS está listo para la Copa Mundial FIFA 2026. El CVOED–CPES monitorea unidades estratégicas en CDMX, Guadalajara y Monterrey; UMF con atención continua y protocolos de urgencias reforzados.",
+      "url": "https://x.com/Tu_IMSS",
+      "fuente": "X · @Tu_IMSS",
+      "tipo": "publicacion",
+      "relevancia": "alta",
+      "fecha": "2026-06-06",
+      "etiquetas": ["cvoed", "umf", "mundial-2026"]
+    },
+    {
+      "id": "seed-imss-2",
+      "cuenta": "Tu_IMSS",
+      "handle": "@Tu_IMSS",
+      "nombre": "IMSS Oficial",
+      "texto": "#IMSSInforma: refuerzo de red médica ante el Mundial 2026 con control de riesgos sanitarios, semáforo operativo y coordinación con protección civil en zonas de estadios y Fan Fest.",
+      "url": "https://x.com/Tu_IMSS",
+      "fuente": "X · @Tu_IMSS",
+      "tipo": "publicacion",
+      "relevancia": "alta",
+      "fecha": "2026-06-07",
+      "etiquetas": ["riesgos-sanitarios", "fan-fest"]
+    },
+    {
+      "id": "seed-imss-3",
+      "cuenta": "Tu_IMSS",
+      "handle": "@Tu_IMSS",
+      "nombre": "IMSS Oficial",
+      "texto": "Personal médico del IMSS capacitado para atención a turistas y derechohabientes durante el Mundial 2026. Informes diarios de eventos adversos y monitoreo nacional desde el Centro Virtual de Operaciones en Emergencias y Desastres.",
+      "url": "https://x.com/Tu_IMSS",
+      "fuente": "X · @Tu_IMSS",
+      "tipo": "publicacion",
+      "relevancia": "media",
+      "fecha": "2026-06-08",
+      "etiquetas": ["turistas", "cvoed"]
+    }
+  ]
+}

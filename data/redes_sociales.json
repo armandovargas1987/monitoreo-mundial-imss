@@ -1,0 +1,398 @@
+{
+  "ok": true,
+  "actualizado": "2026-06-09T18:34:06Z",
+  "cuentas": [
+    {
+      "handle": "zoerobledo",
+      "usuario": "@zoerobledo",
+      "nombre": "Zoé Robledo Aburto",
+      "rol": "Director General del IMSS",
+      "url": "https://x.com/zoerobledo"
+    },
+    {
+      "handle": "Tu_IMSS",
+      "usuario": "@Tu_IMSS",
+      "nombre": "IMSS Oficial",
+      "rol": "Cuenta institucional del Instituto Mexicano del Seguro Social",
+      "url": "https://x.com/Tu_IMSS"
+    }
+  ],
+  "publicaciones": [
+    {
+      "id": "seed-imss-2",
+      "cuenta": "Tu_IMSS",
+      "handle": "@Tu_IMSS",
+      "nombre": "IMSS Oficial",
+      "texto": "#IMSSInforma: refuerzo de red médica ante el Mundial 2026 con control de riesgos sanitarios, semáforo operativo y coordinación con protección civil en zonas de estadios y Fan Fest.",
+      "url": "https://x.com/Tu_IMSS",
+      "fuente": "X · @Tu_IMSS",
+      "tipo": "publicacion",
+      "relevancia": "alta",
+      "fecha": "2026-06-07",
+      "etiquetas": [
+        "riesgos-sanitarios",
+        "fan-fest"
+      ]
+    },
+    {
+      "id": "seed-zr-2",
+      "cuenta": "zoerobledo",
+      "handle": "@zoerobledo",
+      "nombre": "Zoé Robledo Aburto",
+      "texto": "Acompañando a la Presidenta Claudia Sheinbaum, informamos sobre las acciones del IMSS en el Mundial Social 2026: inclusión, deporte adaptado y presencia institucional en la antesala del torneo.",
+      "url": "https://x.com/zoerobledo",
+      "fuente": "X · @zoerobledo",
+      "tipo": "publicacion",
+      "relevancia": "alta",
+      "fecha": "2026-06-08",
+      "etiquetas": [
+        "mundial-social",
+        "mundial-2026"
+      ]
+    },
+    {
+      "id": "gn-61900801",
+      "cuenta": "Tu_IMSS",
+      "handle": "@Tu_IMSS",
+      "nombre": "IMSS Oficial",
+      "texto": "Ante el arranque del Mundial, IMSS activa Comando Central; busca gestionar riesgos, urgencias y salud - El Universal",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPYTk1eUhjM2tfSjkyWVRLVnprTzlFanFpLXFscVlpVmRQN2Q3dkxGdGRSZkdqWmlIbTk1VFlJWFhfekZGNmFmYlVQU0JuMzFLR011R2N0Y0JWVnpCZEJGWWZsRHNEalFXZkNCdmJGU2E0NnhqMlJZMUlRbnhLWVZMWlFKR1NzS3Z4Yjc1XzZ6WTdYVS16YnNHdEVkWGR0aWRzQURYdFM4VkZjdXk2cmFPbjNYRHNNbkdtMTh5T1J6TUFsYVZrTThyalZHa0xMN0NtWGRn0gHnAUFVX3lxTFBCRXp6TWtmdnFIVUM4T1FOcDl6R1lad01rQlVJYUo1U1J4OWUyaVk1RkpCUEF5bWk1aC1UZjVUUjQydUp4ZjhDWlV3VHdzcjlBZE5UclFROWtTcFFOLWk5MUl6ZGhLcmtHbjFOdzFQNTNzdl9Qb2hzWDFWY3pVY2U3WGM5b3lKU1lEd1E0OFhqbmxFMkNxSERIOS14ZDJydlFlbWMzT2trSXE5aWNReGNlR3ZNN1A3czlRS2xpOFE3cHBCNnY3b1dJRDB5VTA3bFc2ZVlmWWZVNWFZYmpobnpFMHdvSlhLbw?oc=5",
+      "fuente": "El Universal",
+      "tipo": "noticia-cita",
+      "relevancia": "alta",
+      "fecha": "Wed, 03 Jun 2026"
+    },
+    {
+      "id": "seed-zr-3",
+      "cuenta": "zoerobledo",
+      "handle": "@zoerobledo",
+      "nombre": "Zoé Robledo Aburto",
+      "texto": "El IMSS activa mega operativo de salud para junio y julio 2026: 253 unidades médicas preparadas, triage en partidos de las sedes CDMX, Guadalajara y Monterrey, y vigilancia epidemiológica de visitantes.",
+      "url": "https://x.com/zoerobledo",
+      "fuente": "Declaración · Comando Central",
+      "tipo": "publicacion",
+      "relevancia": "alta",
+      "fecha": "2026-06-04",
+      "etiquetas": [
+        "253-unidades",
+        "triage",
+        "mundial-2026"
+      ]
+    },
+    {
+      "id": "seed-imss-1",
+      "cuenta": "Tu_IMSS",
+      "handle": "@Tu_IMSS",
+      "nombre": "IMSS Oficial",
+      "texto": "El IMSS está listo para la Copa Mundial FIFA 2026. El CVOED–CPES monitorea unidades estratégicas en CDMX, Guadalajara y Monterrey; UMF con atención continua y protocolos de urgencias reforzados.",
+      "url": "https://x.com/Tu_IMSS",
+      "fuente": "X · @Tu_IMSS",
+      "tipo": "publicacion",
+      "relevancia": "alta",
+      "fecha": "2026-06-06",
+      "etiquetas": [
+        "cvoed",
+        "umf",
+        "mundial-2026"
+      ]
+    },
+    {
+      "id": "gn-70175090",
+      "cuenta": "Tu_IMSS",
+      "handle": "@Tu_IMSS",
+      "nombre": "IMSS Oficial",
+      "texto": "IMSS activa comando central para garantizar salud en Mundial - Milenio",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQTHBwVlJrRWpKUzI4U1BpX0tSdFhBTXdfOHQwVWdVaFIzSUtYdWNSai1HWDRHRWZBVjV6LWhpaDQtZU1YNzJrSU1xM3FCZ3AxT3RFZDJia2lPak04Ym14M1VlcWFyX3c1Z01vZmhIWUQ3R2hjcmlvSi1HSG9lVUY1Q0ZzZEJuVFprZWZhZWRzZm1VcWl2MldCX3U1YzJ4U1pZby1yM1hISF9NZm5tX0tnR9IBsAFBVV95cUxPT0FzSzc1bWtvREJ4UjlCYThRTnRGR3V6UWJlXzRUM0xLOGRIbm5Ya0RpNm8tczF0ZENUMUxUY0Q3Zm1VNTdFX19VR2tPaWk4ZG9OcUE1TlZ2S0RKa0Z2RXdROGNudDJUOFZ3QnlhNXJZTVpfVVFkMERNQkFhaWRQWUpVU3FpMndROEhIUW54WFpsT1VWdThHLWVQbjA0QzJFTk1MYnBQeWl5Tk1vRkRjeg?oc=5",
+      "fuente": "Milenio",
+      "tipo": "noticia-cita",
+      "relevancia": "alta",
+      "fecha": "Tue, 02 Jun 2026"
+    },
+    {
+      "id": "gn-78403705",
+      "cuenta": "Tu_IMSS",
+      "handle": "@Tu_IMSS",
+      "nombre": "IMSS Oficial",
+      "texto": "IMSS instala Comando Central para atender contingencias médicas en el Mundial - 24 HORAS | El Diario sin Límites",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPRkpCQXNKOUZZOGlwSTZZX0tidUFOZVNYMmVsd3p3MjBtZm1oZUlqZXBEVXJ3TG5lZVZ6WGo0ZkdCWlNjWGJYZGthTkxLS1c3bXFtZUZqWGMxYzVOYi01Q053OUZjc3pwdmg2bzJtem53WFZiQ21OUzRSSm9oSmZPbEV6N1F4RUJoTWJUSW9YcThfQjlkUXpUN0pFX3RMTkFJajJwUG9Gelo?oc=5",
+      "fuente": "24 HORAS | El Diario sin Límites",
+      "tipo": "noticia-cita",
+      "relevancia": "alta",
+      "fecha": "Tue, 02 Jun 2026"
+    },
+    {
+      "id": "gn-78918781",
+      "cuenta": "Tu_IMSS",
+      "handle": "@Tu_IMSS",
+      "nombre": "IMSS Oficial",
+      "texto": "IMSS refuerza red médica ante el Mundial 2026 con 253 unidades y control de riesgos sanitarios - consultorsalud.com.mx",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9yNlZHTnVlNkZ4Z195LUQzUHFDc09TRmdOS19aRlk5OTIxLVREV3AwaEZ1RlU1ZmNkSjFrNTZNeVVNc0lxSWVORmR6b2ZQdUNZeGx6MjZXd2hxTDJqV1NoVURiZnBYUmNFcTM4?oc=5",
+      "fuente": "consultorsalud.com.mx",
+      "tipo": "noticia-cita",
+      "relevancia": "alta",
+      "fecha": "Wed, 03 Jun 2026"
+    },
+    {
+      "id": "gn-94533874",
+      "cuenta": "Tu_IMSS",
+      "handle": "@Tu_IMSS",
+      "nombre": "IMSS Oficial",
+      "texto": "IMSS, listo para que ruede el balón: instala Comando Central para el Mundial - IMSS",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFAtamZuNnBYZElKU3B5Z2hDR2NtNl9HSzEtTVNMRzZZWG1wTGY4ZUJLampzMWc4RktNbWJBMnZlbDlvR3ZOX2FkVlFjOUtGMjlqazVici1YalhhcW5idFE?oc=5",
+      "fuente": "IMSS",
+      "tipo": "noticia-cita",
+      "relevancia": "alta",
+      "fecha": "Tue, 02 Jun 2026"
+    },
+    {
+      "id": "seed-zr-1",
+      "cuenta": "zoerobledo",
+      "handle": "@zoerobledo",
+      "nombre": "Zoé Robledo Aburto",
+      "texto": "Instalamos el Comando Central del IMSS para el Mundial 2026. Sesión permanente, monitoreo en tiempo real y coordinación nacional en las tres sedes para proteger la vida, brindar atención médica oportuna y mantener la continuidad de los servicios de salud.",
+      "url": "https://x.com/zoerobledo",
+      "fuente": "X · @zoerobledo",
+      "tipo": "publicacion",
+      "relevancia": "alta",
+      "fecha": "2026-06-05",
+      "etiquetas": [
+        "comando-central",
+        "mundial-2026",
+        "operativo"
+      ]
+    },
+    {
+      "id": "gn-4495126",
+      "cuenta": "zoerobledo",
+      "handle": "@zoerobledo",
+      "nombre": "Zoé Robledo Aburto",
+      "texto": "Zoé Robledo pone en marcha mega operativo del IMSS que cuida a millones de mexicanos y extranjeros en junio y julio de 2026 - Ambito",
+      "url": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxNUWNmQUNsUXp1U2Vrak1XblRMMmFfZEkxXzlfc0ZDTThDbzl1Q2l2N0NqaFVmcEVGUGRZcnJlYnhlN1JlQ2VvSkNOazl1QkU5NGdRSElCbzZMbVFmUDluM3FKdEdqQjY3M3hsSEllVGRjWFg2d2tJWnBtNnlwN3BHb2R6d01Sb2NORk96anBzd3Q2bDBoSXFHamdOZmZDYTR3SjdhZU9tQ05GSVpKLWdpUDlqcERheXF6ZnRnV0gwS2JxNnF3NU0zQWRtcHhkbWtaeG4wY0YzRmdwYk1HVkw4cXAySXdMZ2F2anAxNUtfTzNVTFZrY09lalFYbVXSAYICQVVfeXFMTkV4RktYaUZLTFRQWmNMSkhkNlNhS1M0VUVLU0JucGNodmhDSGo3U1BQb3VOTGdVZWJrLXAyNXFyOUNEMXktQU1IMVB2Zi01OHBqZHJYY1dDQmg5bXpBd2tIQ3VIbmlzUjlrUEpWOGJmd0dJbFZaeUxRSTFzWkNCRXB0RWNVMXZrTXNsdklGTG56RnpIR1o2ZlJZWkN4dk9HSE5pTnc5VFFOWlFGa0s1aUszbWJOUHZjVjZUWDZFamVlSEc3d3BYcmVBbEtqbXAyVjBkT1NlRmdMVGNuNEJtbm44Z2U2X2FNOWZiQ1ZjTEx6dnZUbzR5bGNzM0I4al96a2JR?oc=5",
+      "fuente": "Ambito",
+      "tipo": "noticia-cita",
+      "relevancia": "alta",
+      "fecha": "Thu, 04 Jun 2026"
+    },
+    {
+      "id": "gn-12073706",
+      "cuenta": "Tu_IMSS",
+      "handle": "@Tu_IMSS",
+      "nombre": "IMSS Oficial",
+      "texto": "Consolida IMSS legado social del Mundial con deporte e inclusión - Quadratin Jalisco",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOY1k5c0szak8zdHBfMElZOXRPN2NiRG9GbkdzYmswQmRjWXRJdzBfU3ZZTy1kbVBxcUlXRGswZ1NOakJsM3FxVDZIVF9NQVY4YnNielE1THpOUUNtRzkyR29haDBYYXZZcjBMRGloQnBZQmZNSzFZb0FCc2ZudDJxbTE0djdsRllITXVqRWFQUHRtZ05NcGJPeENUMUtsT0R2S1AxZVp4MnBRXzg?oc=5",
+      "fuente": "Quadratin Jalisco",
+      "tipo": "noticia-cita",
+      "relevancia": "media",
+      "fecha": "Thu, 04 Jun 2026"
+    },
+    {
+      "id": "gn-65565774",
+      "cuenta": "zoerobledo",
+      "handle": "@zoerobledo",
+      "nombre": "Zoé Robledo Aburto",
+      "texto": "Deportivos del IMSS, sedes del Mundial Social 2026 y espacios para impulsar la inclusión de las mujeres: Zoé Robledo - Gob MX",
+      "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOQU9jSzktRUNuMGRvSk5jd2dDUU44TDE4X0FhZzZTTFhHZ2NYZ3ZRWk5tSjVUNGNaX2Y0a1FxQURHaDZYSVN0eVoxMHVyeUxIWGpxWmp2WUJyZjVZWFVFcVhzMlZZUHZHVlFXNkdGWmpzWnVZOVhKbzdnTDJHTzdHRXlzOTI0OWNsZ0xrNTJDYVJKeWwtWDZoM280bDlKU200QUxmWEowcmxCN0pxNm9neXZ4MklrUjgzYThQSjNzR2lqNl9aclB1YmU0ZV9NZzQzSkF2UUZGSWJUcWVKakhNdUc3LWtWQ29PLXc?oc=5",
+      "fuente": "Gob MX",
+      "tipo": "noticia-cita",
+      "relevancia": "media",
+      "fecha": "Mon, 30 Mar 2026"
+    },
+    {
+      "id": "gn-89866768",
+      "cuenta": "Tu_IMSS",
+      "handle": "@Tu_IMSS",
+      "nombre": "IMSS Oficial",
+      "texto": "Fiscalía recibirá denuncias en 12 idiomas por el mundial - El Porvenir - Portada",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNWnFlekhqMGVqTlgwdHZKRkZBVGZ6cElBZGd3UElJQThMaXNtNnN3ZUY1Y29GV0tGOUtVSDRPQXd5aEhqWTlLMDkzRnRVeW9LaFFKclV1NC1PV1lnWk9sRjdXSTFBZk5Wa2FLZTRiT2I5VThiYzk1YnJ0SEV1OHdjRTBNY0h1eERScEE1YjFjRkx2QVh3MWc?oc=5",
+      "fuente": "El Porvenir - Portada",
+      "tipo": "noticia-cita",
+      "relevancia": "media",
+      "fecha": "Thu, 04 Jun 2026"
+    },
+    {
+      "id": "gn-73790610",
+      "cuenta": "Tu_IMSS",
+      "handle": "@Tu_IMSS",
+      "nombre": "IMSS Oficial",
+      "texto": "Fútbol, salud e inclusión: la apuesta del IMSS rumbo al Mundial 2026 - Tabasco HOY",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOeEU5aDJiTGZzX2FERGJsTVlGU3ZVQnowdjZkV3paeldGQW04cVRWWWhXWW4zbW5JZk9NVW1OVTJHbzFrNFZJV1FaY0RORjFkVGdrSHJDbVdCeXlxUDVQcEJ0OHJxTG9SRHBLeW5KMHhQM1FYb1EyQ09MT2hOYTF4OFdidXdzQ0lRM3JRNG9SaXBmaVBRemtnSXRn?oc=5",
+      "fuente": "Tabasco HOY",
+      "tipo": "noticia-cita",
+      "relevancia": "media",
+      "fecha": "Thu, 04 Jun 2026"
+    },
+    {
+      "id": "gn-76456262",
+      "cuenta": "Tu_IMSS",
+      "handle": "@Tu_IMSS",
+      "nombre": "IMSS Oficial",
+      "texto": "IMSS activa comando de vigilancia y gestión de riesgos rumbo al Mundial 2026 - La Jornada",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPLWMxeG9kTXVwS2pfdmFNb3dsenBJdkprdnA3TV9ROWNLNTI2WjJIMkt5bVVJR0RDNWREdzE3REV2NzNETHlTanpUSmtILVdkeWo5UnoweHdjZERMQ1EyTFB5Z0dSQmowTi03Q1huQUQzMXhWTXlmd0RzNHFYaEowSVFJaWpOalpPa05BRS1jVFVjcEY0Y2pJT1hRNnZ5aGIyMXRiZDdtdHdKeW5FS2VCQ1pabnJvWWtOMm9Pd3NybWJTVXB1cFdEMXpsWQ?oc=5",
+      "fuente": "La Jornada",
+      "tipo": "noticia-cita",
+      "relevancia": "media",
+      "fecha": "Wed, 03 Jun 2026"
+    },
+    {
+      "id": "gn-54979301",
+      "cuenta": "Tu_IMSS",
+      "handle": "@Tu_IMSS",
+      "nombre": "IMSS Oficial",
+      "texto": "IMSS lanza el Mundialito 2026: fechas y categorías para mujeres, adultos mayores y personas con Síndrome de Down - Eje Central",
+      "url": "https://news.google.com/rss/articles/CBMijwJBVV95cUxOdDc3V0VUZ0VhWndtV2xfVnZoVzJBamw5aHFrMVIwS3NpR0lCZk82aURwOV84T2d3eUQ3Vzd1NlppbnYydWJXemZaSW9mc0hWdjNQZ3RWNEIyQWF4TmlxTHpyeWc3dDkyUUp3OWtvekktaTk2U3RyUTM4MXFVbkxCa3BXUjlaUXgzX1BlcDB0TGFCcUZhVFE5ZVM5LU1oaWZVRXZQWGtoUk9mSGlaMW8tTVdRSDdkY2stcmVYYjVJWlFHblAtMmpWNThSSTJWOE96UFpPWjBtUkcxdS16RFNDblh1UmhCbkhvYWtjdGlWczE5YWtBVFZ0SkV4SzhWZmRGU3RtOC1oOXdBcWtiSEU0?oc=5",
+      "fuente": "Eje Central",
+      "tipo": "noticia-cita",
+      "relevancia": "media",
+      "fecha": "Wed, 19 Nov 2025"
+    },
+    {
+      "id": "gn-50000149",
+      "cuenta": "Tu_IMSS",
+      "handle": "@Tu_IMSS",
+      "nombre": "IMSS Oficial",
+      "texto": "IMSS y Secretaría de Turismo inauguran muestra sobre los mundiales en la Ciudad de México - Infobae",
+      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPVjhHME1pTVBPVVNWc05JbGc5YV9GZ0otQkZHLU1wQzZlR1ZRV3NrdjdPMllhdG9qakZld2lES3htZjZ6UDg5d1VqUHN4aER5Yy1UNzFwQm16V2pqZFRsc3JPU282bXRVQm5sYlRyNGUtejRrRHBRbjJhQ1Nla0hmd3JVR2p2YUFSaUN1cEtvWm9CUjluci1lbzlqQzkxMDdEVm00eG5SZTA3WVFoYnk1QXAxOGlnVzIybHRLQUY0akY4NEs3Z0tUcFJOOEo0U05hQWNsWW80ajnSAfMBQVVfeXFMTlpFelg3MGNVRml5MS1zeGp1Ul9FcThrd1FuYzZBcEE1akNvUlpFRzJoN0ZBOEcyU21XYW1xb3BxTVotOE1JX2dyRy1wWVVBVUcwSXh6WXZUbzFVVmVMOGdIbE5QbmFSR0x6MHkxbDdvNFNaZldRbEk2Xzd0NkhoVER1MDM3V1NDb012UXplTWI4ZGI1R0JpQUZuZ0ZhM2wtZWN5cHhYY2lQSzEwR185OHFHV3dNa3loZng2MXJSYnV6Wl94Uzd6b19aWkJoVzAzNnp1aU5GLTZ2QkhWZXFBXzlqWUt1RUtvN0tTalZ4cHJGTlc4?oc=5",
+      "fuente": "Infobae",
+      "tipo": "noticia-cita",
+      "relevancia": "media",
+      "fecha": "Wed, 27 May 2026"
+    },
+    {
+      "id": "gn-39700364",
+      "cuenta": "Tu_IMSS",
+      "handle": "@Tu_IMSS",
+      "nombre": "IMSS Oficial",
+      "texto": "IMSS: Comando Vigilancia y Gestión de Riesgos para el Mundial - RegeneraciónMX",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPQmhHaU9hNDQzcGNaSnlndjQ4NnZQZ3QwWkFYOWJCU2dfV3JZMGtnTndtLTlGMm5JUHlCZHFBR2NFMmdMRzJpQUtIaThkV3NIV1BwTGpia29heE9zYnNadXV2SEhSS0pUUmhxQUlydmJSM3VRQ3BOclB2Vnk1ai1zb3ZWNTZFaXpVRmdoS3V30gGTAUFVX3lxTFBMNHpzZXdhNkc3b0M4YzVseUQ5cTY1WW85WTRRSUxuTE9aRE9oeXZBa0RFZU9jWlIwcU5HVU04RlRLdXNBOFpnM1hpRjFaYkQwR3EyU2RYQmEtOTdsV203d21BM2daQzl5clRfZVpmNHgxbHNJOGFvcG1lVE45aW40UFNmRnF0Q0p4RnBxbUpLRXk4RQ?oc=5",
+      "fuente": "RegeneraciónMX",
+      "tipo": "noticia-cita",
+      "relevancia": "media",
+      "fecha": "Wed, 03 Jun 2026"
+    },
+    {
+      "id": "gn-55136153",
+      "cuenta": "zoerobledo",
+      "handle": "@zoerobledo",
+      "nombre": "Zoé Robledo Aburto",
+      "texto": "Mundial Social es una invitación del IMSS para que continúe el fútbol con inclusión y territorio: Zoé Robledo - Gob MX",
+      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNcjhnb1QxWFpQN25JOExBcGhKRVVsR01vajlFNlNadE1SMnhhbzNOWVo5UjFCcjZkZkdUVktpZ09kcHVGWmRSaTQtU1JyZUNzX0tzMExkWWhqdktIWXc1Z1VNOE1FVmNRbVc2TFVqbXh0V1FEVDJhRVJVclFZR3pvZmpNMGRxTjR6c2Ezc01fUmtVSGVLUlBOUVZud005blF6cTF6em1CUkZHRGpJczNHNzZEcFZHc0ZuX2ZFbjUwVU5rNkpJV0Jxam1ZQ1U4ZlNOa2FfbUNn?oc=5",
+      "fuente": "Gob MX",
+      "tipo": "noticia-cita",
+      "relevancia": "media",
+      "fecha": "Fri, 22 May 2026"
+    },
+    {
+      "id": "gn-94508668",
+      "cuenta": "Tu_IMSS",
+      "handle": "@Tu_IMSS",
+      "nombre": "IMSS Oficial",
+      "texto": "Mundial: IMSS instala Semáforo de Alerta Operativa - Once Noticias Digital",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNRHV0MHFlOVNzTmNWYTY1eS1BcUU3OVNNZmFERjhiVlFLUWtJZmtLQ3BjZlJSeURFSW1fWDdCWGhId2FKaHRsREZHZW14NzBuN2pmUzd3cDVkQmdOeDVyb0xjTVo4R3pkSGtVbjBENU5PSHd1SDBxRlNXc3VTb0Zhby1PNHV0dENCY2hwdHFRZE9xRmRqblVBRDJqMNIBmwFBVV95cUxNRHV0MHFlOVNzTmNWYTY1eS1BcUU3OVNNZmFERjhiVlFLUWtJZmtLQ3BjZlJSeURFSW1fWDdCWGhId2FKaHRsREZHZW14NzBuN2pmUzd3cDVkQmdOeDVyb0xjTVo4R3pkSGtVbjBENU5PSHd1SDBxRlNXc3VTb0Zhby1PNHV0dENCY2hwdHFRZE9xRmRqblVBRDJqMA?oc=5",
+      "fuente": "Once Noticias Digital",
+      "tipo": "noticia-cita",
+      "relevancia": "media",
+      "fecha": "Wed, 03 Jun 2026"
+    },
+    {
+      "id": "gn-97864091",
+      "cuenta": "Tu_IMSS",
+      "handle": "@Tu_IMSS",
+      "nombre": "IMSS Oficial",
+      "texto": "Nació Sofía Isabela, la primera bebé de 2026 en México - Infobae",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNT3lSVXNQRGRjMjBPMzZzbEVpYnB0SGxvNlJJNGg2MmRFV2NYZUhlS2htUnNmRTR4NUh3M2pGSm9VY3o1WDRFWDBGaEZVMGpURWFQMHhfSEVZR1RtRGxWVDBocVRPTWo3NC1pT0NOVHE3Zkk1OFJFZ3hiY2UtcWNuTnVJVlNRbTBsUUsycWVOYlgtZFBOQVpmclB0MNIBtgFBVV95cUxQVDFOVm9kX0Naa1htaGQ1cGJPY0RSVGd0Zk9LQndFbE1SQXpNS2g3a2FsdkFjMW5wNDUtb1FaZ0VYSllsX05YYmlEZkdXZGNCX2syX2swcGN0RGVuSE5UTGx0U29KWGM5XzVLc0o2Rjk2VUlWalo2UDdCazBMTW14TGNmc1VDSFZheU5ZVGU4LU0yYkN6NGNhTkxnWm9nWnAwSmNvOE1CLWphalZjbWstZ1JIRXNOZw?oc=5",
+      "fuente": "Infobae",
+      "tipo": "noticia-cita",
+      "relevancia": "media",
+      "fecha": "Wed, 31 Dec 2025"
+    },
+    {
+      "id": "seed-imss-3",
+      "cuenta": "Tu_IMSS",
+      "handle": "@Tu_IMSS",
+      "nombre": "IMSS Oficial",
+      "texto": "Personal médico del IMSS capacitado para atención a turistas y derechohabientes durante el Mundial 2026. Informes diarios de eventos adversos y monitoreo nacional desde el Centro Virtual de Operaciones en Emergencias y Desastres.",
+      "url": "https://x.com/Tu_IMSS",
+      "fuente": "X · @Tu_IMSS",
+      "tipo": "publicacion",
+      "relevancia": "media",
+      "fecha": "2026-06-08",
+      "etiquetas": [
+        "turistas",
+        "cvoed"
+      ]
+    },
+    {
+      "id": "gn-54510658",
+      "cuenta": "Tu_IMSS",
+      "handle": "@Tu_IMSS",
+      "nombre": "IMSS Oficial",
+      "texto": "Sarampión en México: ¿Cuántos casos se han registrado a día de hoy 15 de febrero de 2026? - El Heraldo de México",
+      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOT1g2WVY0eDFjRzYwQ284YnU5dk8wUWVlOUYtdmNPUGN4Vkw2LTBlTGg2aktrbzJfdmx0dGZVNjlydFg2MHg5NVRfV2JmRlVzWUtvNDYxRngwOUtweS12N0xocFJDQk51WVdhZGNYVndoTXhRQ1h0N2QwN1o4SXZ4bnNBXy1DY0NXT0U0bHMweU4wSDRrZ2tuRWVoaWEyOXhEVkNGOTgzXzA0UE5sVFpVdFlkZHVJUUh1QmY2V0ZobHo5OXNQb1RraEN3OFhabEVSOEg0blRSY0V0M3U3SUxB0gHkAUFVX3lxTE5vM2ZPQW5KeHFIYWh1TzJFM1R6QjE3MzN4M1ZXd0thdjU4ZFhjOUI3TEtlaGtHa1BXcmVSbVpxOTg5M181LU1RZngyaWhmeWpjY2VleTMtX0R5NEZEaVJJVHdtcXp5TTUyU0hsbTR3ekEwZ2EzbTd1Q2FKOGJfUXVSU0s1c0wtT3VBT2FZYldpTWNCZmhpRmdkTVpVT2xKM04yQlpVR0N6bXU5Y1ZHck5Zek5RbDYzYjdmTjR2TlNnb2c4Z3NqOVljQ0VBTnBOUFp1ei1ISW16LTRRd1pOZFBId1g4Nw?oc=5",
+      "fuente": "El Heraldo de México",
+      "tipo": "noticia-cita",
+      "relevancia": "media",
+      "fecha": "Sun, 15 Feb 2026"
+    },
+    {
+      "id": "x-Tu_IMSS-2",
+      "cuenta": "Tu_IMSS",
+      "handle": "@Tu_IMSS",
+      "nombre": "IMSS Oficial",
+      "texto": "Square profile picture]( Gobierno de México @GobiernoMX 4h #MañaneraDelPueblo desde Palacio Nacional. Martes 09 de junio 2026 1:44:30 3,540 views #MañaneraDelPueblo desde Palacio Nacional. Martes 09 de junio 2026 [![Image 5: Square profil",
+      "url": "https://x.com/Tu_IMSS",
+      "fuente": "X · perfil público",
+      "tipo": "publicacion",
+      "relevancia": "media",
+      "fecha": "2026-06-09"
+    },
+    {
+      "id": "x-Tu_IMSS-1",
+      "cuenta": "Tu_IMSS",
+      "handle": "@Tu_IMSS",
+      "nombre": "IMSS Oficial",
+      "texto": "Title: IMSS  (@Tu_IMSS) / X URL Source: Published Time: Tue, 09 Jun 2026 18:32:57 GMT Markdown Content: 298.3K posts IMSS  @Tu_IMSS ## IMSS ’s posts [![Image 2: Square profile",
+      "url": "https://x.com/Tu_IMSS",
+      "fuente": "X · perfil público",
+      "tipo": "publicacion",
+      "relevancia": "media",
+      "fecha": "2026-06-09"
+    },
+    {
+      "id": "x-Tu_IMSS-3",
+      "cuenta": "Tu_IMSS",
+      "handle": "@Tu_IMSS",
+      "nombre": "IMSS Oficial",
+      "texto": "e México @GobiernoMX 4h #MañaneraDelPueblo desde Palacio Nacional. Martes 09 de junio 2026 1:44:30 3,540 views #MañaneraDelPueblo desde Palacio Nacional. Martes 09 de junio 2026 [](",
+      "url": "https://x.com/Tu_IMSS",
+      "fuente": "X · perfil público",
+      "tipo": "publicacion",
+      "relevancia": "media",
+      "fecha": "2026-06-09"
+    },
+    {
+      "id": "x-Tu_IMSS-4",
+      "cuenta": "Tu_IMSS",
+      "handle": "@Tu_IMSS",
+      "nombre": "IMSS Oficial",
+      "texto": "uare profile picture]( Gobierno de México @GobiernoMX Jun 8 #MañaneraDelPueblo desde Palacio Nacional. Lunes 08 de junio 2026 ## New to X? Sign",
+      "url": "https://x.com/Tu_IMSS",
+      "fuente": "X · perfil público",
+      "tipo": "publicacion",
+      "relevancia": "media",
+      "fecha": "2026-06-09"
+    },
+    {
+      "id": "gn-54918829",
+      "cuenta": "Tu_IMSS",
+      "handle": "@Tu_IMSS",
+      "nombre": "IMSS Oficial",
+      "texto": "¿Pensionados del IMSS podrían perder su pago en mayo 2026? Esto dice la Suprema Corte - Milenio",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOTlRWLU9RTWlSdERHT2kwNm9NZTdpcVJhY0hxNXVYZks5TzlHbnNZQWdwbjVTSXRDd0NoOEVwUEVpYThuTkFkbGNwRGowdkcybmhRV1MwS0paQTFGWDd1aFJqWXlWYjdZYTVEWE5wbVVDX1RYMDEyYVp0YUU2TkRrQjFUVUFLd2xD0gGIAUFVX3lxTE1DTXlaNEhnby0zR19oaUJvWWtaZmN3RWYtSTl5SUJWRlF4ZjJBRjctTXlESTdVR3dhNm9SZHhvT2taaDduS1kzYnNXTElsY0JaTUhaLWhfbXBsUmo1bTRMMnRiTDRKY2FwLTVhMVUxVUwwTGtwaGF5T3F2UzBsaW9qaTNpNkZEbGk?oc=5",
+      "fuente": "Milenio",
+      "tipo": "noticia-cita",
+      "relevancia": "media",
+      "fecha": "Sat, 02 May 2026"
+    }
+  ],
+  "total": 29
+}

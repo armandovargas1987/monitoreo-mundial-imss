@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Centro de Monitoreo · Marchas y Manifestaciones · Copa Mundial 2026 · IMSS</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="assets/css/monitor.css">
+</head>
+<body>
+<div class="topbar">
+  <div class="brand">
+    <div class="seal">IMSS</div>
+    <div><h1>Centro de Monitoreo · <b>Marchas y Manifestaciones</b></h1>
+    <div class="sub">Copa Mundial FIFA 2026 · CVOED–CPES · Comando Central</div></div>
+  </div>
+  <div class="spacer"></div>
+  <span class="src-pill" id="srcPill">Origen de datos: —</span>
+  <a class="adminlink" href="admin.html">⚙ Captura / Administración</a>
+  <a class="adminlink" id="authBox" href="acceso.html">⚙ Administración</a>
+  <button class="adminlink" id="btnFs" title="Pantalla completa">⛶ Pantalla</button>
+  <div class="alert-pill"><span class="dot"></span>ALERTA MÁXIMA</div>
+  <div class="countdown"><span class="cd-lbl">Inauguración</span>
+    <div class="cd-unit"><b id="cd-d">00</b><span>días</span></div>
+    <div class="cd-unit"><b id="cd-h">00</b><span>hrs</span></div>
+    <div class="cd-unit"><b id="cd-m">00</b><span>min</span></div>
+    <div class="cd-unit"><b id="cd-s">00</b><span>seg</span></div>
+  </div>
+  <div class="clock"><div class="t" id="clk">--:--:--</div><div class="d" id="clkd">—</div></div>
+</div>
+
+<div class="app">
+  <div class="col">
+    <div class="card"><div class="card-h"><span class="ic">▣</span> Indicadores en tiempo real</div>
+      <div class="card-b"><div class="kpis">
+        <div class="kpi k-rojo"><div class="n" id="kpiActivas">0</div><div class="l">Marchas activas</div></div>
+        <div class="kpi k-guinda"><div class="n" id="kpiUnidades">0</div><div class="l">Unidades en radio</div></div>
+        <div class="kpi k-gold"><div class="n" id="kpiPartidos">0</div><div class="l">Partidos en ventana</div></div>
+        <div class="kpi"><div class="n" id="kpiAforo">0</div><div class="l">Aforo monitoreado</div></div>
+      </div></div>
+    </div>
+    <div class="card"><div class="card-h"><span class="ic">⚑</span> Sede</div>
+      <div class="card-b"><div class="seg" id="citySeg">
+        <button class="on" data-city="ALL">Todas</button><button data-city="CDMX">CDMX</button>
+        <button data-city="GDL">GDL</button><button data-city="MTY">MTY</button>
+      </div>
+      <div class="toggle-row" style="margin-top:10px"><label><span class="swatch" style="background:var(--guinda)"></span> Auto-rotar sedes (proyección)</label><input class="switch" type="checkbox" id="autoRot"></div>
+      </div>
+    </div>
+    <div class="card"><div class="card-h"><span class="ic">▦</span> Capas del mapa</div>
+      <div class="card-b">
+        <div style="margin-bottom:10px">
+          <div style="font-size:11px;font-weight:700;color:var(--gray);text-transform:uppercase;margin-bottom:6px">Vista del mapa</div>
+          <div class="seg" id="mapBaseSeg">
+            <button type="button" class="on" data-base="street">🗺 Mapa</button>
+            <button type="button" data-base="satellite">🛰 Satélite</button>
+          </div>
+        </div>
+        <div class="toggle-row"><label><span class="swatch sw-march"></span> Marchas y manifestaciones</label><input class="switch" type="checkbox" id="lyMarch" checked></div>
+        <div class="toggle-row"><label><span class="swatch sw-ring"></span> Radio de exposición (5 km)</label><input class="switch" type="checkbox" id="lyRing" checked></div>
+        <div class="toggle-row"><label><span class="swatch sw-est"></span> Estadios</label><input class="switch" type="checkbox" id="lyEst" checked></div>
+        <div class="toggle-row"><label><span class="swatch sw-fan"></span> Fan Fest / celebración</label><input class="switch" type="checkbox" id="lyFan" checked></div>
+        <div class="toggle-row"><label><span class="swatch sw-hosp"></span> Hospitales IMSS</label><input class="switch" type="checkbox" id="lyHosp" checked></div>
+        <div class="toggle-row"><label><span class="swatch sw-umf"></span> Unidades de Medicina Familiar</label><input class="switch" type="checkbox" id="lyUmf" checked></div>
+      </div>
+    </div>
+    <div class="card"><div class="card-h"><span class="ic">▲</span> Riesgo por sede</div><div class="card-b" id="riskBox"></div></div>
+    <div class="card"><div class="card-h"><span class="ic">𝕏</span> Redes · Mundial 2026</div>
+      <div class="card-b" id="redesBox" style="font-size:12.5px;max-height:200px;overflow:auto"></div>
+    </div>
+    <div class="footer-note">Monitoreo CVOED · @zoerobledo · @Tu_IMSS · Regionalización IMSS.</div>
+  </div>
+
+  <div class="col">
+    <div class="map-wrap"><div id="map"></div></div>
+    <div class="card"><div class="card-h"><span class="ic">📅</span> Línea de tiempo · partidos en México</div>
+      <div class="datestrip" id="dateStrip"></div></div>
+  </div>
+
+  <div class="col">
+    <div class="card"><div class="card-h"><span class="ic">◉</span> Detalle de la selección</div>
+      <div class="card-b detail" id="detail">
+        <div class="empty">Selecciona una marcha en el mapa para ver el <b>análisis de proximidad</b> con las unidades médicas del IMSS y las noticias relacionadas.</div>
+      </div>
+    </div>
+    <div class="card" style="flex:1;display:flex;flex-direction:column;min-height:260px">
+      <div class="card-h" style="justify-content:space-between"><span><span class="ic">📰</span> Noticias en vivo · marchas</span>
+        <button class="btn btn-o" id="newsRefresh" style="padding:5px 9px">Actualizar</button></div>
+      <div class="card-b" id="newsBox" style="overflow:auto;flex:1"></div>
+    </div>
+  </div>
+</div>
+
+<div class="ticker" id="ticker">
+  <div class="lab"><span class="pip"></span> Noticias · marchas</div>
+  <div class="vp"><div class="track" id="tkTrack">Cargando noticias…</div></div>
+  <div class="clk" id="tkClock">--:--</div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="assets/js/store.js"></script>
+<script src="assets/js/monitor.js"></script>
+</body>
+</html>

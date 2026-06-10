@@ -1,0 +1,34 @@
+{
+  "cuentas": [
+    {
+      "handle": "zoerobledo",
+      "usuario": "@zoerobledo",
+      "nombre": "Zoé Robledo Aburto",
+      "rol": "Director General del IMSS",
+      "url": "https://x.com/zoerobledo"
+    },
+    {
+      "handle": "Tu_IMSS",
+      "usuario": "@Tu_IMSS",
+      "nombre": "IMSS Oficial",
+      "rol": "Cuenta institucional del Instituto Mexicano del Seguro Social",
+      "url": "https://x.com/Tu_IMSS"
+    }
+  ],
+  "filtro_mundial": [
+    "mundial", "fifa", "2026", "copa del mundo", "world cup",
+    "estadio", "azteca", "akron", "bbva", "sede", "fan fest",
+    "mundial social", "inauguraci"
+  ],
+  "filtro_imss": [
+    "imss", "umf", "hospital", "salud", "comando central", "cvoed",
+    "atención médica", "atencion medica", "vigilancia", "epidemiol",
+    "operativo", "triage", "derechohabiente", "turista", "unidades médicas",
+    "253 unidades", "seguro social", "tu_imss"
+  ],
+  "consultas_noticias": [
+    "Zoé Robledo Mundial 2026 IMSS",
+    "Tu_IMSS Mundial 2026",
+    "IMSS Comando Central Mundial 2026"
+  ]
+}

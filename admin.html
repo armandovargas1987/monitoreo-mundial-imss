@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panel de captura · Marchas y Manifestaciones · IMSS</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="assets/css/admin.css">
+</head>
+<body>
+<script>
+if (!sessionStorage.getItem('monitoreo_auth')) location.href = 'acceso.html';
+</script>
+
+<div class="top">
+  <div class="seal">IMSS</div>
+  <div><h1>Panel de captura · <b>Marchas y Manifestaciones</b></h1><div class="sub">CVOED–CPES · Captura por OOAD · Mundial 2026</div></div>
+  <div class="spacer"></div>
+  <button class="btn btn-o" id="btnNoticias" title="Actualizar noticias desde archivo / ingesta">⟳ Actualizar noticias</button>
+  <a class="btn btn-o" href="monitor.html" target="_blank">↗ Monitor</a>
+  <span style="font-size:12px;color:var(--gray)">👤 <b id="elNombre">—</b> · admin</span>
+  <a class="btn btn-guinda" href="monitor.html" onclick="sessionStorage.clear()">Salir</a>
+</div>
+
+<div class="tabbar">
+  <button class="on" data-tab="marchas">Marchas</button>
+  <button data-tab="alertas">Noticias y alertas <span class="badge-count" id="alertBadge" style="display:none">0</span></button>
+  <button data-tab="redes">Redes · DG e IMSS <span class="badge-count" id="redesBadge" style="display:none">0</span></button>
+</div>
+
+<div class="wrap">
+  <div class="panel">
+
+    <div class="tab on" id="tab-marchas">
+      <div class="bar">
+        <button class="btn btn-guinda" id="btnNueva">+ Nueva marcha</button>
+        <span class="spacer"></span>
+        <select id="fCiudad"><option value="">Todas las sedes</option><option>CDMX</option><option>GDL</option><option>MTY</option></select>
+        <select id="fEstado"><option value="">Todos los estados</option></select>
+        <input id="fTexto" placeholder="Buscar título…" style="min-width:200px">
+        <label style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--gray)"><input type="checkbox" id="fBajas"> Ver dadas de baja</label>
+      </div>
+
+      <div class="form-card" id="formCard">
+        <h3 id="formTitle">Nueva marcha</h3>
+        <input type="hidden" id="m_id">
+        <div class="grid">
+          <label class="f full">Título del evento
+            <input id="m_titulo" placeholder="Ej. Megamarcha rumbo a la inauguración"></label>
+          <label class="f">Sede
+            <select id="m_ciudad"><option value="CDMX">CDMX</option><option value="GDL">GDL</option><option value="MTY">MTY</option></select></label>
+          <label class="f">OOAD que captura
+            <select id="m_ooad"></select></label>
+          <label class="f">Tipo de evento
+            <select id="m_tipo"></select></label>
+          <label class="f">Nivel de riesgo
+            <select id="m_nivel"></select></label>
+          <label class="f">Estado
+            <select id="m_estado"></select></label>
+          <label class="f">Partido asociado
+            <select id="m_partido"><option value="">— Ninguno —</option></select></label>
+          <label class="f">Fecha
+            <input type="date" id="m_fecha"></label>
+          <label class="f">Hora
+            <input type="time" id="m_hora"></label>
+          <label class="f">Aforo estimado
+            <input type="number" id="m_aforo" min="0" value="0"></label>
+          <label class="f full">Ruta / ubicación (texto)
+            <input id="m_ruta" placeholder="Ej. Reforma → Ángel de la Independencia"></label>
+          <label class="f">Latitud
+            <input id="m_lat" placeholder="19.4270000"></label>
+          <label class="f">Longitud
+            <input id="m_lng" placeholder="-99.1677000"></label>
+          <label class="f">Responsable de captura
+            <input id="m_cap" placeholder="Nombre / área"></label>
+          <label class="f full">Fuente · título de nota (opcional)
+            <input id="m_ftit" placeholder="Título de la nota periodística"></label>
+          <label class="f full">Fuente · URL (opcional)
+            <input id="m_furl" placeholder="https://…"></label>
+          <div class="full">
+            <div class="hint" style="margin-bottom:6px">📍 Haz clic en el mapa para fijar la ubicación (o arrastra el marcador).</div>
+            <div id="pick"></div>
+          </div>
+        </div>
+        <div style="display:flex;gap:10px;margin-top:14px">
+          <button class="btn btn-g" id="btnGuardar">Guardar</button>
+          <button class="btn btn-o" id="btnCancelar">Cancelar</button>
+        </div>
+      </div>
+
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th>Estado</th><th>Título</th><th>Sede</th><th>Tipo</th><th>Nivel</th><th>Fecha/Hora</th><th>Aforo</th><th>OOAD</th><th style="text-align:right">Acciones</th></tr></thead>
+          <tbody id="tbMarchas"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="tab" id="tab-alertas">
+      <div class="bar">
+        <select id="fAlertCiudad">
+          <option value="">Todas las sedes</option>
+          <option value="CDMX">CDMX</option>
+          <option value="GDL">GDL</option>
+          <option value="MTY">MTY</option>
+        </select>
+        <input id="fAlertTexto" placeholder="Buscar en titulares…" style="min-width:220px">
+        <label style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--gray)">
+          <input type="checkbox" id="fSoloNuevas" checked> Solo sin registrar
+        </label>
+      </div>
+      <p class="hint" id="alertSummary" style="margin:0 0 14px;padding:10px;background:#f8f8f6;border-radius:10px;border:1px solid var(--line)">Cargando…</p>
+      <p class="hint" style="margin-bottom:14px">
+        Las alertas se generan automáticamente al detectar titulares sobre <b>marchas, manifestaciones, bloqueos, CNTE, antorchas</b> y similares
+        en medios y agregadores (Google Noticias). Las que aún no están vinculadas a una marcha capturada aparecen en rojo.
+        Usa <b>“Registrar como marcha”</b> para precargar el formulario con la nota.
+      </p>
+      <div id="alertList"></div>
+    </div>
+
+    <div class="tab" id="tab-redes">
+      <div class="bar">
+        <button class="btn btn-o" id="btnRedes">⟳ Actualizar @zoerobledo y @Tu_IMSS</button>
+        <select id="fRedesCuenta">
+          <option value="">Ambas cuentas</option>
+          <option value="zoerobledo">@zoerobledo · DG</option>
+          <option value="Tu_IMSS">@Tu_IMSS · Oficial</option>
+        </select>
+        <input id="fRedesTexto" placeholder="Buscar en publicaciones…" style="min-width:220px">
+      </div>
+      <p class="hint" id="redesSummary" style="margin:0 0 14px;padding:10px;background:#f0f7f4;border-radius:10px;border:1px solid var(--line)">Cargando…</p>
+      <p class="hint" style="margin-bottom:14px">
+        Monitoreo de <b>@zoerobledo</b> (Director General) y <b>@Tu_IMSS</b> (cuenta oficial).
+        Solo se muestran mensajes en alusión al <b>Mundial 2026</b> con relevancia operativa para el IMSS
+        (Comando Central, UMF, vigilancia epidemiológica, sedes, turistas, operativo de salud).
+        Fuentes: perfil público en X y titulares que citan sus declaraciones.
+      </p>
+      <div id="redesList"></div>
+    </div>
+
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="assets/js/store.js"></script>
+<script src="assets/js/admin.js"></script>
+</body>
+</html>
