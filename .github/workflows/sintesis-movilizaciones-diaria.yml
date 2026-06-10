@@ -2,7 +2,6 @@ name: Síntesis diaria movilizaciones SSC
 
 on:
   schedule:
-    # 6:00 a.m. hora Ciudad de México (todos los días)
     - cron: "0 6 * * *"
       timezone: America/Mexico_City
   workflow_dispatch:
@@ -33,6 +32,5 @@ jobs:
           SSC_SMTP_HOST: ${{ secrets.SSC_SMTP_HOST }}
           SSC_SMTP_USER: ${{ secrets.SSC_SMTP_USER }}
           SSC_SMTP_PASSWORD: ${{ secrets.SSC_SMTP_PASSWORD }}
-          SSC_SMTP_FROM: ${{ secrets.SSC_SM TP_FROM }}
-        run: python3 scripts/generar_sintesis_ssc.py --enviar-correo 
-        Agregar GitHub Action síntesis diaria
+          SSC_SMTP_FROM: ${{ secrets.SSC_SMTP_FROM }}
+        run: python3 scripts/generar_sintesis_ssc.py --enviar-correo
