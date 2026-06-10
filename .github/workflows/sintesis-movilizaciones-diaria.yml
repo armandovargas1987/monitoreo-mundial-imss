@@ -12,7 +12,7 @@ permissions:
 jobs:
   sintesis:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -39,11 +39,20 @@ jobs:
       - name: Descargar PDF SSC
         run: |
           mkdir -p data
-          curl -fL --retry 5 --retry-delay 15 --retry-all-errors \
-            --connect-timeout 30 --max-time 300 \
-            -A "Mozilla/5.0" \
-            -o data/.ssc_agenda_cache.pdf \
-            "https://www.ssc.cdmx.gob.mx/storage/app/media/Movilizaciones/Agenda%20de%20Movilizaciones%20Sociales.pdf"
+          PDF_URL=$(python3 -c "import json; c=json.load(open('data/ssc_config.json')); print(c['pdf_url'])")
+          PDF_BACKUP=$(python3 -c "import json; c=json.load(open('data/ssc_config.json')); print(c.get('pdf_url_respaldo',''))")
+          download_pdf() {
+            curl -fL --retry 6 --retry-delay 20 --retry-all-errors \
+              --connect-timeout 45 --max-time 600 \
+              -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" \
+              -H "Referer: https://www.ssc.cdmx.gob.mx/" \
+              -H "Accept: application/pdf,*/*" \
+              -o data/.ssc_agenda_cache.pdf "$1"
+          }
+          if ! download_pdf "$PDF_URL"; then
+            echo "URL principal falló, probando respaldo..."
+            download_pdf "$PDF_BACKUP"
+          fi
           ls -la data/.ssc_agenda_cache.pdf
 
       - name: Parsear agenda SSC
